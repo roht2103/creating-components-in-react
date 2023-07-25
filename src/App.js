@@ -1,8 +1,14 @@
 import './App.css';
+let userInput;
+function MyHeading(){
+  return(
+    <h1>this are components created in react</h1>
+  )
+}
 
 function MyButton(){
   return(
-    <button>
+    <button onClick={clickHandeller}>
         submit
     </button>
   );
@@ -16,12 +22,19 @@ function MyLabel(){
 
 function MyInput(){
   return(
-    <input id='name' placeholder='name'></input>
+    <input id='name' placeholder='name' onChange={inputChangeHandeller}></input>
   )
+}
+function clickHandeller(){
+  console.log(userInput);
+}
+function inputChangeHandeller(event) {
+  userInput = event.target.value;
 }
 export default function App() {
   return (
-    <div className="App">
+    <div className="App-header">
+      <MyHeading/>
       <MyLabel/>
       <MyInput/>
       <MyButton/>
