@@ -1,12 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function MyButton(){
+  return(
+    <button>
+        myButton
+    </button>
+  );
+}
+export default function App() {
   return (
     <div className="App">
-      
+      <MyButton/>
     </div>
   );
 }
-
-export default App;
