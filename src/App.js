@@ -1,4 +1,5 @@
 import './App.css';
+import MyTextArea from './components/textForm'
 let userInput;
 function MyHeading(){
   return(
@@ -16,7 +17,7 @@ function MyButton(){
 
 function MyLabel(){
   return(
-    <label for="name">Name</label>
+    <label htmlFor="name">Name</label>
   )
 }
 
@@ -38,6 +39,8 @@ export default function App() {
       <MyLabel/>
       <MyInput/>
       <MyButton/>
+
+      <MyTextArea/>
     </div>
   );
 }
